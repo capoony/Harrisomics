@@ -1,0 +1,80 @@
+# Exclude large data directories
+data/
+
+# Exclude specific large results subdirectories
+results/denovo/
+results/phylogeny/data/
+results/phylogeny/BUSCO/
+results/phylogeny/partridge_quail/
+results/phylogeny/concatenated/
+results/phylogeny/prealigned/
+results/phylogeny/mafft/
+
+# Exclude ECMSD results except for specific figures
+results/ECMSD/*/logs/
+results/ECMSD/*/mapping/*.paf.gz
+results/ECMSD/*/mapping/*.txt
+!results/ECMSD/HBCG002/mapping/Mito_summary_genus_Proportions.png
+!results/ECMSD/HBCG002/mapping/Mito_summary_genus_ReadLengths.png
+
+# Keep only specific phylogeny figure
+!results/phylogeny/phylogeny/Partridge_Quail_BUSCO.png
+!results/phylogeny/phylogeny/Partridge_Quail_BUSCO.pdf
+
+# Common files to ignore
+*.log
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# Conda/Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# Backup files
+*.bak
+*.backup
+*_backup
+*.old
+
+# Compressed files (except specific referenced outputs)
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# Large sequence files
+*.fastq
+*.fastq.gz
+*.fasta
+*.fasta.gz
+*.fa
+*.fa.gz
+*.sam
+*.bam
+*.bai
+
+# BUSCO output directories (except final trees)
+busco_*/
+run_*/
+
+# Temporary analysis files
+tmp/
+temp/
+scratch/
